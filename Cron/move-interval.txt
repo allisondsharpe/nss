@@ -21,6 +21,8 @@
 #
 # m h  dom mon dow   command
 
-07 05 09 06 07 ./foo1 mv /home/Allisonsharpe/Downloads/interval.txt /home/Allisonsharpe/interval.txt
+07 05 09 06 07 ./foo1 
+07 5 * * 2 ./foo2 
+14 5 09 06 07 ./foo3 mv /home/Allisonsharpe/Documents/Cron/move-interval.txt 
 
 

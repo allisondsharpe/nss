@@ -1,0 +1,522 @@
+allison@sandbox:~$ whoami
+allison
+allison@sandbox:~$ cd ~
+allison@sandbox:~$ echo $HOME
+/home/allison
+allison@sandbox:~$ cd /home/allison
+allison@sandbox:~$ groups
+allison adm cdrom sudo dip plugdev lpadmin sambashare
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  3 root    root    4096 Sep  8 17:45 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-r--r--r--  1 allison allison    0 Sep  9 17:54 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ touch ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  3 root    root    4096 Sep  8 17:45 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-r--r--r--  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ chown allison:allison ownership.txt
+allison@sandbox:~$ chown allison:allison test1
+allison@sandbox:~$ chown -R allison:allison test1 
+allison@sandbox:~$ chown sharon:sharon ownership.txt
+chown: invalid user: ‘sharon:sharon’
+allison@sandbox:~$ chown sharonrhames:sharonrhames ownership.txt
+chown: changing ownership of ‘ownership.txt’: Operation not permitted
+allison@sandbox:~$ sudo chown sharonrhames:sharonrhames ownership.txt
+[sudo] password for allison: 
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison      allison      4096 Sep  9 18:04 .
+drwxr-xr-x  4 root         root         4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison      allison      8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison      allison      1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison      allison       220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison      allison      3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison      allison      4096 Sep  9 17:04 .cache
+drwx------ 16 allison      allison      4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison      allison      4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison      allison        25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison      allison      4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison      allison      4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison      allison      8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison      allison      4096 Sep  8 18:40 .gconf
+-rw-------  1 allison      allison       322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison      allison      4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison      allison        81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison      allison      4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison      allison      4096 Sep  8 17:57 Music
+-r--r--r--  1 sharonrhames sharonrhames    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison      allison      4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison      allison       675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison      allison      4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison      allison         0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison      allison      4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison      allison      4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison      allison      4096 Sep  8 17:57 Videos
+-rw-------  1 allison      allison        52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison      allison      2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ sudo chown allison:allison ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-r--r--r--  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ ls -la /Users/sharonrhames/
+ls: cannot access /Users/sharonrhames/: No such file or directory
+allison@sandbox:~$ ls -la /Users/sharonrhames/Pictures
+ls: cannot access /Users/sharonrhames/Pictures: No such file or directory
+allison@sandbox:~$ ls -la /Users/sharonrhames/Pictures/
+ls: cannot access /Users/sharonrhames/Pictures/: No such file or directory
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-r--r--r--  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ chmod ugo=rx ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-r-xr-xr-x  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ chmod u=rwx,g=rw,o=r ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-rwxrw-r--  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ chmod ugo+x ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-rwxrwxr-x  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ chmod a-x ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-rw-rw-r--  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ chmod ugo-r ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+--w--w----  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ nano ownership.txt
+allison@sandbox:~$ chmod ugo=r ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-r--r--r--  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ nano ownership.txt
+allison@sandbox:~$ chmod u+w ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-rw-r--r--  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ chmod -R g+w test1
+allison@sandbox:~$ chmod 777 ownership.txt
+allison@sandbox:~$ ls -la
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-rwxrwxrwx  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ sudo ls -la 
+[sudo] password for allison: 
+total 124
+drwxr-xr-x 16 allison allison 4096 Sep  9 18:04 .
+drwxr-xr-x  4 root    root    4096 Sep  9 18:19 ..
+-rw-rw-r--  1 allison allison 8779 Sep  9 18:04 advancedbash.odt
+-rw-------  1 allison allison 1151 Sep  9 18:03 .bash_history
+-rw-r--r--  1 allison allison  220 Sep  8 17:45 .bash_logout
+-rw-r--r--  1 allison allison 3760 Sep  8 17:45 .bashrc
+drwx------ 14 allison allison 4096 Sep  9 17:04 .cache
+drwx------ 16 allison allison 4096 Sep  9 18:04 .config
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Desktop
+-rw-r--r--  1 allison allison   25 Sep  8 17:57 .dmrc
+drwxr-xr-x  3 allison allison 4096 Sep  9 17:03 Documents
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Downloads
+-rw-r--r--  1 allison allison 8980 Sep  8 17:45 examples.desktop
+drwx------  3 allison allison 4096 Sep  8 18:40 .gconf
+-rw-------  1 allison allison  322 Sep  8 17:57 .ICEauthority
+drwx------  3 allison allison 4096 Sep  8 17:57 .local
+-rw-rw-r--  1 allison allison   81 Sep  9 18:04 .~lock.advancedbash.odt#
+drwx------  4 allison allison 4096 Sep  9 17:00 .mozilla
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Music
+-rwxrwxrwx  1 allison allison    0 Sep  9 18:13 ownership.txt
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Pictures
+-rw-r--r--  1 allison allison  675 Sep  8 17:45 .profile
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Public
+-rw-r--r--  1 allison allison    0 Sep  8 18:24 .sudo_as_admin_successful
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Templates
+drwxrwxr-x  2 allison allison 4096 Sep  9 17:56 test1
+drwxr-xr-x  2 allison allison 4096 Sep  8 17:57 Videos
+-rw-------  1 allison allison   52 Sep  8 17:57 .Xauthority
+-rw-------  1 allison allison 2361 Sep  8 19:11 .xsession-errors
+allison@sandbox:~$ sudo chown sharonrhames ownership.txt 
+allison@sandbox:~$ sudo -k 
+allison@sandbox:~$ sudo chown allison ownership.txt
+[sudo] password for allison: 
+allison@sandbox:~$ whoami
+allison
+allison@sandbox:~$ ls -la /Users/sharonrhames/Pictures/
+ls: cannot access /Users/sharonrhames/Pictures/: No such file or directory
+allison@sandbox:~$ sudo ls -ls /Users/sharonrhames/Pictures/
+ls: cannot access /Users/sharonrhames/Pictures/: No such file or directory
+allison@sandbox:~$ sudo ls -la /Users/sharonrhames/Pictures/
+ls: cannot access /Users/sharonrhames/Pictures/: No such file or directory
+allison@sandbox:~$ sudo whoami
+root
+allison@sandbox:~$ sudo -u sharonrhames whoami
+sharonrhames
+allison@sandbox:~$ cat /etc/sudoers
+cat: /etc/sudoers: Permission denied
+allison@sandbox:~$ sudo cat /etc/sudoers
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+Defaults	env_reset
+Defaults	mail_badpass
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) ALL
+
+# See sudoers(5) for more information on "#include" directives:
+
+#includedir /etc/sudoers.d
+allison@sandbox:~$ 
+
