@@ -1,0 +1,175 @@
+allison@sandbox:~$ sudo apt-get update
+[sudo] password for allison: 
+Ign http://us.archive.ubuntu.com vivid InRelease
+Ign http://us.archive.ubuntu.com vivid-updates InRelease
+Ign http://us.archive.ubuntu.com vivid-backports InRelease
+Ign http://security.ubuntu.com vivid-security InRelease
+Hit http://us.archive.ubuntu.com vivid Release.gpg
+Hit http://us.archive.ubuntu.com vivid-updates Release.gpg
+Get:1 http://security.ubuntu.com vivid-security Release.gpg [933 B]
+Hit http://us.archive.ubuntu.com vivid-backports Release.gpg
+Hit http://us.archive.ubuntu.com vivid Release  
+Hit http://us.archive.ubuntu.com vivid-updates Release                
+Get:2 http://security.ubuntu.com vivid-security Release [63.5 kB]     
+Hit http://us.archive.ubuntu.com vivid-backports Release
+Hit http://us.archive.ubuntu.com vivid/main Sources                            
+Hit http://us.archive.ubuntu.com vivid/restricted Sources              
+Hit http://us.archive.ubuntu.com vivid/universe Sources                     
+Hit http://us.archive.ubuntu.com vivid/multiverse Sources                   
+Hit http://us.archive.ubuntu.com vivid/main amd64 Packages             
+Hit http://us.archive.ubuntu.com vivid/restricted amd64 Packages        
+Hit http://us.archive.ubuntu.com vivid/universe amd64 Packages
+Hit http://us.archive.ubuntu.com vivid/multiverse amd64 Packages  
+Get:3 http://security.ubuntu.com vivid-security/main Sources [41.3 kB]
+Hit http://us.archive.ubuntu.com vivid/main i386 Packages                 
+Hit http://us.archive.ubuntu.com vivid/restricted i386 Packages             
+Hit http://us.archive.ubuntu.com vivid/universe i386 Packages                  
+Hit http://us.archive.ubuntu.com vivid/multiverse i386 Packages   
+Get:4 http://security.ubuntu.com vivid-security/restricted Sources [28 B]
+Hit http://us.archive.ubuntu.com vivid/main Translation-en        
+Hit http://us.archive.ubuntu.com vivid/multiverse Translation-en  
+Hit http://us.archive.ubuntu.com vivid/restricted Translation-en 
+Get:5 http://security.ubuntu.com vivid-security/universe Sources [16.0 kB]
+Hit http://us.archive.ubuntu.com vivid/universe Translation-en           
+Hit http://us.archive.ubuntu.com vivid-updates/main Sources         
+Hit http://us.archive.ubuntu.com vivid-updates/restricted Sources   
+Get:6 http://security.ubuntu.com vivid-security/multiverse Sources [1,966 B]
+Hit http://us.archive.ubuntu.com vivid-updates/universe Sources               
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse Sources
+Get:7 http://security.ubuntu.com vivid-security/main amd64 Packages [113 kB]
+Hit http://us.archive.ubuntu.com vivid-updates/main amd64 Packages      
+Hit http://us.archive.ubuntu.com vivid-updates/restricted amd64 Packages 
+Hit http://us.archive.ubuntu.com vivid-updates/universe amd64 Packages       
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse amd64 Packages     
+Hit http://us.archive.ubuntu.com vivid-updates/main i386 Packages            
+Hit http://us.archive.ubuntu.com vivid-updates/restricted i386 Packages        
+Hit http://us.archive.ubuntu.com vivid-updates/universe i386 Packages          
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse i386 Packages        
+Get:8 http://security.ubuntu.com vivid-security/restricted amd64 Packages [28 B]
+Hit http://us.archive.ubuntu.com vivid-updates/main Translation-en       
+Get:9 http://security.ubuntu.com vivid-security/universe amd64 Packages [53.0 kB]
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse Translation-en     
+Hit http://us.archive.ubuntu.com vivid-updates/restricted Translation-en       
+Hit http://us.archive.ubuntu.com vivid-updates/universe Translation-en
+Get:10 http://security.ubuntu.com vivid-security/multiverse amd64 Packages [3,496 B]
+Hit http://us.archive.ubuntu.com vivid-backports/main Sources                  
+Hit http://us.archive.ubuntu.com vivid-backports/restricted Sources 
+Hit http://us.archive.ubuntu.com vivid-backports/universe Sources   
+Get:11 http://security.ubuntu.com vivid-security/main i386 Packages [113 kB]
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse Sources      
+Hit http://us.archive.ubuntu.com vivid-backports/main amd64 Packages     
+Hit http://us.archive.ubuntu.com vivid-backports/restricted amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/universe amd64 Packages  
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse amd64 Packages    
+Hit http://us.archive.ubuntu.com vivid-backports/main i386 Packages            
+Hit http://us.archive.ubuntu.com vivid-backports/restricted i386 Packages      
+Get:12 http://security.ubuntu.com vivid-security/restricted i386 Packages [28 B]
+Hit http://us.archive.ubuntu.com vivid-backports/universe i386 Packages   
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse i386 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/main Translation-en
+Get:13 http://security.ubuntu.com vivid-security/universe i386 Packages [53.0 kB]
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse Translation-en    
+Hit http://us.archive.ubuntu.com vivid-backports/restricted Translation-en     
+Hit http://us.archive.ubuntu.com vivid-backports/universe Translation-en       
+Get:14 http://security.ubuntu.com vivid-security/multiverse i386 Packages [3,680 B]
+Hit http://security.ubuntu.com vivid-security/main Translation-en
+Hit http://security.ubuntu.com vivid-security/multiverse Translation-en
+Hit http://security.ubuntu.com vivid-security/restricted Translation-en
+Hit http://security.ubuntu.com vivid-security/universe Translation-en
+Fetched 463 kB in 4s (104 kB/s)
+E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+allison@sandbox:~$ sudo dpkg --configure -a
+Processing triggers for ureadahead (0.100.0-19) ...
+Setting up phpmyadmin (4:4.2.12-2) ...
+dbconfig-common: writing config to /etc/dbconfig-common/phpmyadmin.conf
+Replacing config file /etc/phpmyadmin/config-db.php with new version
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2).
+unable to connect to mysql server.
+error encountered creating user:
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+dbconfig-common: phpmyadmin configure: ignoring errors from here forwards
+populating database via sql...  done.
+dbconfig-common: flushing administrative password
+apache2_invoke: Enable configuration phpmyadmin
+Processing triggers for libc-bin (2.21-0ubuntu4) ...
+Processing triggers for systemd (219-7ubuntu6) ...
+allison@sandbox:~$ sudo apt-get update
+Ign http://us.archive.ubuntu.com vivid InRelease
+Ign http://security.ubuntu.com vivid-security InRelease
+Ign http://us.archive.ubuntu.com vivid-updates InRelease
+Hit http://security.ubuntu.com vivid-security Release.gpg
+Ign http://us.archive.ubuntu.com vivid-backports InRelease
+Hit http://security.ubuntu.com vivid-security Release
+Hit http://us.archive.ubuntu.com vivid Release.gpg
+Hit http://security.ubuntu.com vivid-security/main Sources
+Hit http://us.archive.ubuntu.com vivid-updates Release.gpg
+Hit http://us.archive.ubuntu.com vivid-backports Release.gpg 
+Hit http://security.ubuntu.com vivid-security/restricted Sources
+Hit http://us.archive.ubuntu.com vivid Release                
+Hit http://security.ubuntu.com vivid-security/universe Sources        
+Hit http://us.archive.ubuntu.com vivid-updates Release
+Hit http://security.ubuntu.com vivid-security/multiverse Sources
+Hit http://security.ubuntu.com vivid-security/main amd64 Packages      
+Hit http://us.archive.ubuntu.com vivid-backports Release       
+Hit http://security.ubuntu.com vivid-security/restricted amd64 Packages        
+Hit http://us.archive.ubuntu.com vivid/main Sources
+Hit http://security.ubuntu.com vivid-security/universe amd64 Packages
+Hit http://us.archive.ubuntu.com vivid/restricted Sources          
+Hit http://security.ubuntu.com vivid-security/multiverse amd64 Packages
+Hit http://us.archive.ubuntu.com vivid/universe Sources
+Hit http://security.ubuntu.com vivid-security/main i386 Packages
+Hit http://us.archive.ubuntu.com vivid/multiverse Sources     
+Hit http://security.ubuntu.com vivid-security/restricted i386 Packages
+Hit http://us.archive.ubuntu.com vivid/main amd64 Packages        
+Hit http://security.ubuntu.com vivid-security/universe i386 Packages
+Hit http://us.archive.ubuntu.com vivid/restricted amd64 Packages  
+Hit http://security.ubuntu.com vivid-security/multiverse i386 Packages
+Hit http://us.archive.ubuntu.com vivid/universe amd64 Packages    
+Hit http://security.ubuntu.com vivid-security/main Translation-en 
+Hit http://us.archive.ubuntu.com vivid/multiverse amd64 Packages  
+Hit http://security.ubuntu.com vivid-security/multiverse Translation-en
+Hit http://us.archive.ubuntu.com vivid/main i386 Packages
+Hit http://security.ubuntu.com vivid-security/restricted Translation-en
+Hit http://us.archive.ubuntu.com vivid/restricted i386 Packages   
+Hit http://security.ubuntu.com vivid-security/universe Translation-en
+Hit http://us.archive.ubuntu.com vivid/universe i386 Packages     
+Hit http://us.archive.ubuntu.com vivid/multiverse i386 Packages
+Hit http://us.archive.ubuntu.com vivid/main Translation-en
+Hit http://us.archive.ubuntu.com vivid/multiverse Translation-en
+Hit http://us.archive.ubuntu.com vivid/restricted Translation-en
+Hit http://us.archive.ubuntu.com vivid/universe Translation-en
+Hit http://us.archive.ubuntu.com vivid-updates/main Sources
+Hit http://us.archive.ubuntu.com vivid-updates/restricted Sources
+Hit http://us.archive.ubuntu.com vivid-updates/universe Sources
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse Sources
+Hit http://us.archive.ubuntu.com vivid-updates/main amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/restricted amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/universe amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/main i386 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/restricted i386 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/universe i386 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse i386 Packages
+Hit http://us.archive.ubuntu.com vivid-updates/main Translation-en
+Hit http://us.archive.ubuntu.com vivid-updates/multiverse Translation-en
+Hit http://us.archive.ubuntu.com vivid-updates/restricted Translation-en
+Hit http://us.archive.ubuntu.com vivid-updates/universe Translation-en
+Hit http://us.archive.ubuntu.com vivid-backports/main Sources
+Hit http://us.archive.ubuntu.com vivid-backports/restricted Sources
+Hit http://us.archive.ubuntu.com vivid-backports/universe Sources
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse Sources
+Hit http://us.archive.ubuntu.com vivid-backports/main amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/restricted amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/universe amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse amd64 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/main i386 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/restricted i386 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/universe i386 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse i386 Packages
+Hit http://us.archive.ubuntu.com vivid-backports/main Translation-en
+Hit http://us.archive.ubuntu.com vivid-backports/multiverse Translation-en
+Hit http://us.archive.ubuntu.com vivid-backports/restricted Translation-en
+Hit http://us.archive.ubuntu.com vivid-backports/universe Translation-en
+Reading package lists... Done                  
+allison@sandbox:~$ 
+
