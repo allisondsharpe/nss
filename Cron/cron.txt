@@ -20,9 +20,6 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 #
 # m h  dom mon dow   command
-
-07 05 09 06 07 ./foo1 
-07 5 * * 2 ./foo2 
-14 5 09 06 07 ./foo3 mv /home/Allisonsharpe/Documents/Cron/move-interval.txt 
-
+00 12 11 09 05 ./foo1
+00 12 * * 05 ./foo2 mv /home/Allisonsharpe/Documents/Cron
 
